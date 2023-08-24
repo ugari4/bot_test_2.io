@@ -82,7 +82,7 @@
   </style>
 </head>
 <body> 
-  <div id='mean'>
+  <div id='main'>
     <h1>online shope</h1>
     <img src='https://github.com/ugari4/bot_test_1.io/blob/main/your-image.jpg'> 
     <p>lorem sds </p>
@@ -96,7 +96,19 @@
   </form>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script>
-    
+    let tg = window.Telegram.WebApp;
+    let buy = document.getElementById("buy");
+    let order = document.getElementById("order");
+
+    buy.addEventListener("click", () => {
+      document.getElementById("main").style.display = "none";
+      document.getElementById("form").style.display = "block";
+      document.getElementById("main").value = tg.initDataUnsafe.first_nam + " " + tg.initDataUnsafe.last_nam;
+     }
+
+     order.addEventListener("click", () => {
+      tg.close();
+     }                    
   </script>
 </body>
 </html>

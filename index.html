@@ -103,12 +103,12 @@
     buy.addEventListener("click", () => {
       document.getElementById("main").style.display = "none";
       document.getElementById("form").style.display = "block";
-      document.getElementById("main").value = tg.initDataUnsafe.first_nam + " " + tg.initDataUnsafe.last_nam;
-     }
+      document.getElementById("user_name").value = tg.initDataUnsafe.first_nam + " " + tg.initDataUnsafe.last_nam;
+     });
 
      order.addEventListener("click", () => {
       tg.close();
-     }                    
+     });                    
   </script>
 </body>
 </html>
